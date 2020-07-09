@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find mpu6050_serial_to_imu)/launch/demo.launch" />
+    <node name="twist" pkg="sakbot" type="twist.py" />
+    <node name="diff_tf" pkg="sakbot" type="raw_odom.py" />
+<include file="$(find sakbot)/launch/smoothometry.launch" />
+</launch>

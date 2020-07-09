@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+<include file="$(find rplidar_ros)/launch/rplidar_ros.launch" />
+
+<include file="$(find sakbot)/launch/sakbot_states.launch" />
+    <node name="serial_node" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" />
+</launch>
